@@ -1,0 +1,102 @@
+{
+  "info": {
+    "_postman_id": "your_postman_collection_id",
+    "name": "Friends Service",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Send Friend Invite",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"senderId\": \"1\",\n    \"receiverId\": \"2\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/friends/invite",
+          "host": ["{{baseUrl}}"],
+          "path": ["friends", "invite"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Accept Friend Invite",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"senderId\": \"1\",\n    \"receiverId\": \"2\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/friends/accept",
+          "host": ["{{baseUrl}}"],
+          "path": ["friends", "accept"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Remove Friend",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"userId\": \"1\",\n    \"friendId\": \"2\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/friends/remove",
+          "host": ["{{baseUrl}}"],
+          "path": ["friends", "remove"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Friends List",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/friends/list/1",
+          "host": ["{{baseUrl}}"],
+          "path": ["friends", "list", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Open Friend Invites",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/friends/invites/1",
+          "host": ["{{baseUrl}}"],
+          "path": ["friends", "invites", "1"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
